@@ -34,3 +34,5 @@ $string['auth_pop3port_key'] = 'Port';
 $string['auth_pop3type'] = 'Server type. If your server uses certificate security, choose pop3cert.';
 $string['auth_pop3type_key'] = 'Type';
 $string['pluginname'] = 'POP3 server';
+$string['auth_pop3mapusernametoemail'] = 'Map pop3 username to local email';
+$string['auth_pop3mapusernametoemailhelp'] = 'If an email address is used as remote pop3 username to authenticate you can map it to local email (for example to be able to lock email field).';

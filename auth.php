@@ -137,6 +137,17 @@ class auth_plugin_pop3 extends auth_plugin_base {
         }
     }
 
+    /**
+     * {@inheritdoc} 
+     *
+     * @param string $username username
+     * @return mixed array with no magic quotes or false on error
+     */
+    function get_userinfo($username) {
+        return !empty($this->config->mapusernametoemail) 
+	    ? array('email' => $username)
+            : array();
+    }
 }
 
 

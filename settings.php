@@ -58,6 +58,11 @@ if ($ADMIN->fulltree) {
             get_string('auth_pop3changepasswordurl_key', 'auth_pop3'),
             get_string('changepasswordhelp', 'auth'), '', PARAM_URL));
 
+    // Map pop3 username to email
+    $settings->add(new admin_setting_configcheckbox('auth_pop3/mapusernametoemail',
+        get_string('auth_pop3mapusernametoemail', 'auth_pop3'),
+        get_string('auth_pop3mapusernametoemailhelp', 'auth_pop3'), ''));
+
     // Display locking / mapping of profile fields.
     $authplugin = get_auth_plugin('pop3');
     display_auth_lock_options($settings, $authplugin->authtype, $authplugin->userfields,
